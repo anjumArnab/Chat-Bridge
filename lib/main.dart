@@ -15,16 +15,10 @@ class ChatBridge extends StatelessWidget {
       title: 'Chat Bridge',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          elevation: 1,
-          shadowColor: Colors.black12,
-        ),
         cardTheme: CardTheme(
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(15),
           ),
         ),
         textTheme: GoogleFonts.poppinsTextTheme(),
