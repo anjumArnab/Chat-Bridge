@@ -2,7 +2,7 @@
 
 A Flutter application integrated with a Node.js server that receives Facebook Messenger messages via webhooks and forwards them to Flutter clients in real-time using Socket.IO
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v16 or higher)
 - npm or yarn
@@ -10,7 +10,7 @@ A Flutter application integrated with a Node.js server that receives Facebook Me
 - Facebook Page
 - ngrok (for local development)
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -35,7 +35,7 @@ A Flutter application integrated with a Node.js server that receives Facebook Me
    PAGE_ACCESS_TOKEN=your_facebook_page_access_token_here
 
 
-## 🔧 Configuration
+## Configuration
 
 ### Facebook App Setup
 
@@ -66,7 +66,7 @@ const VERIFY_TOKEN = process.env.VERIFY_TOKEN || 'your_verify_token_here';
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'your_page_access_token_here';
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Development Mode
 
@@ -88,7 +88,7 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'your_page_access_tok
 npm start
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Webhook Endpoints
 
@@ -123,7 +123,7 @@ npm start
 }
 ```
 
-## 🔄 Socket.IO Events
+## Socket.IO Events
 
 ### Server Events (Emitted by Server)
 
@@ -179,24 +179,3 @@ class MessengerSyncService {
   }
 }
 ```
-
-## 🧪 Testing
-
-### Test Message Sending
-
-Send a POST request to `/test-message`:
-
-```bash
-curl -X POST http://localhost:3000/test-message \
-  -H "Content-Type: application/json" \
-  -d '{"message": "Test message", "senderId": "test_user"}'
-```
-
-## 🌐 Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `PORT` | Server port (default: 3000) | No |
-| `VERIFY_TOKEN` | Facebook webhook verify token | Yes |
-| `PAGE_ACCESS_TOKEN` | Facebook page access token | Yes |
-| `NODE_ENV` | Environment (development/production) | No |
